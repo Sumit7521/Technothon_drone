@@ -71,7 +71,7 @@ export default function Cursor() {
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 5, 5]} />
         <AnimatedCursorModel />
-        <OrbitControls enableZoom={false} />
+        {/* <OrbitControls enableZoom={false} /> */}
       </Canvas>
       <BackgroundMusic />
     </div>
