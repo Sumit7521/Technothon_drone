@@ -20,7 +20,7 @@ const Clicker = () => {
   
 
   return (
-    <div className='flex flex-col justify-start items-start h-screen w-screen bg-transparent'>
+    <div className='flex flex-col justify-start items-start h-screen w-screen bg-transparent absolute z-10'>
         <h2>{count}</h2>
         <div className='flex gap-2'>
             <button onClick={increment} className='border-2 w-fit px-1'>increment</button>

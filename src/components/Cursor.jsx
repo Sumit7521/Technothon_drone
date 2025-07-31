@@ -4,6 +4,7 @@ import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { useGLTF, useAnimations, OrbitControls } from '@react-three/drei';
 import BackgroundMusic from './BackgroundMusic'; // ✅ Import the new component
 import * as THREE from 'three';
+import Clicker from './Clicker';
 
 function AnimatedCursorModel(props) {
   const group = useRef();
@@ -46,7 +47,7 @@ function AnimatedCursorModel(props) {
   // 🌀 Animate model position and rotation
   useFrame((_, delta) => {
     if (group.current) {
-      group.current.position.lerp(targetPos, 0.03);
+      group.current.position.lerp(targetPos, 0.01);
       group.current.rotation.y += delta * 0.5;
     }
   });
@@ -66,7 +67,8 @@ useGLTF.preload('/models/animedrone1.glb');
 
 export default function Cursor() {
   return (
-    <div className="h-screen w-screen bg-gray-600">
+    <div className="h-screen w-screen ">
+      <Clicker />
       <Canvas gl={{ alpha: true }} camera={{ position: [0, 0, 5], fov: 75 }}>
         <ambientLight intensity={0.6} />
         <directionalLight position={[5, 5, 5]} />

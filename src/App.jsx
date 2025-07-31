@@ -4,9 +4,10 @@ import Cursor from './components/Cursor';
 
 const App = () => {
   return (
-    <div className="relative bg-transparent h-screen w-screen overflow-hidden">
+    <div className="relative h-screen w-screen bg-gray-600 overflow-hidden">
+      {/* <Clicker /> */}
       <Cursor />
-      <Clicker />
+
       {/* 3D Cursor Layer */}
     </div>
   );
