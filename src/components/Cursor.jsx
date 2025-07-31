@@ -75,7 +75,7 @@ export default function Cursor() {
         <AnimatedCursorModel />
         {/* <OrbitControls enableZoom={false} /> */}
       </Canvas>
-      <BackgroundMusic />
+      {/* <BackgroundMusic /> */}
     </div>
   );
 }
